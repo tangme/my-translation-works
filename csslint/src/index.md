@@ -3,11 +3,11 @@
 规则 根据字母升序排列
 
 * [adjoining-classes](https://github.com/CSSLint/csslint/wiki/Disallow-adjoining-classes)
-* [box-model](https://github.com/CSSLint/csslint/wiki/Beware-of-box-model-size) 
-* [box-sizing](https://github.com/CSSLint/csslint/wiki/Disallow-box-sizing)
-* [bulletproof-font-face](https://github.com/CSSLint/csslint/wiki/Bulletproof-font-face)
-* [compatible-vendor-prefixes](https://github.com/CSSLint/csslint/wiki/Require-compatible-vendor-prefixes)
-* [empty-rules](https://github.com/CSSLint/csslint/wiki/Disallow-empty-rules)
+* [box-model](https://github.com/tangme/my-translation-works/blob/master/csslint/src/box-model.md)   [原址](https://github.com/CSSLint/csslint/wiki/Beware-of-box-model-size)
+* [box-sizing](https://github.com/tangme/my-translation-works/blob/master/csslint/src/box-sizing.md)   [原址](https://github.com/CSSLint/csslint/wiki/Disallow-box-sizing)
+* [bulletproof-font-face](https://github.com/tangme/my-translation-works/blob/master/csslint/src/bulletproof-font-face.md)   [原址](https://github.com/CSSLint/csslint/wiki/Bulletproof-font-face)
+* [compatible-vendor-prefixes](https://github.com/tangme/my-translation-works/blob/master/csslint/src/compatible-vendor-prefixes.md)   [原址](https://github.com/CSSLint/csslint/wiki/Require-compatible-vendor-prefixes)
+* [empty-rules](https://github.com/tangme/my-translation-works/blob/master/csslint/src/empty-rules.md)   [原址](https://github.com/CSSLint/csslint/wiki/Disallow-empty-rules)
 * [display-property-grouping](https://github.com/CSSLint/csslint/wiki/Require-properties-appropriate-for-display)
 * [duplicate-background-images](https://github.com/CSSLint/csslint/wiki/Disallow-duplicate-background-images)
 * [duplicate-properties](https://github.com/CSSLint/csslint/wiki/Disallow-duplicate-properties)
