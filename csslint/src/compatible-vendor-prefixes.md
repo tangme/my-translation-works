@@ -1,4 +1,4 @@
-## Require compatible vendor prefixes (使用内核前缀)
+## 使用内核前缀 [Require compatible vendor prefixes](https://github.com/CSSLint/csslint/wiki/Require-compatible-vendor-prefixes)
 
 实验性的CSS属性,通常需要添加内核前缀,方能实现其效果。当然,等到标准的最终统一与建立就不需要再添加前缀了。许多CSS3属性对应都有多种前缀,包括 Firefox(`-moz`),Safari/Chrome(`-webkit`),Opera(`-o`),和 Internet Explorer(`-ms`)。正因为如此，我们在使用新属性时就很容易忘记 添加属性的内核前缀。
 

@@ -1,4 +1,4 @@
-## 小心使用盒子模型大小 (Beware of box model size)
+## 小心使用盒子模型大小 [Beware of box model size](https://github.com/CSSLint/csslint/wiki/Beware-of-box-model-size)
 
 盒子模型是CSS当中最常误解的内容之一。"盒子模型 (Box model)"会参考一系列盒子属性来最终确定元素的显示。盒子的最里层为 内容。内容被内边距包裹,内边距之外再由边框包裹。盒子最终的宽度也就由以上的属性相互影响,是不是有些小困惑。来,看下面的例子:
 

@@ -1,4 +1,4 @@
-## 预防字体引用错误 (Bulletproof font face)
+## 预防字体引用错误 [Bulletproof font face](https://github.com/CSSLint/csslint/wiki/Bulletproof-font-face)
 
 当使用`@font-face`来 跨游览器声明 多字体类型时,你会发现在老版IE中出现404错误,这是因为老版IE在解析字体声明时的缺陷。来,举个例子,看如下语法:
 

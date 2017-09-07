@@ -1,4 +1,4 @@
-## 不允许使用 盒子大小 (Disallow box sizing)
+## 不允许使用 盒子大小 [Disallow box sizing](https://github.com/CSSLint/csslint/wiki/Disallow-box-sizing)
 
 CSS的`box-sizing`属性用来定义 边框,内边距,宽度和高度是如何相互影响彼此的。此属性默认值为`content-box`,意思是 宽和高是有元素内容本身决定,接着 内边距与边框 再将内容包裹上。请看以下例子:
 
