@@ -1,4 +1,4 @@
-## 许允许空规则 [Disallow empty rules](https://github.com/CSSLint/csslint/wiki/Disallow-empty-rules)
+## 不允许空规则 [Disallow empty rules](https://github.com/CSSLint/csslint/wiki/Disallow-empty-rules)
 
 空规则即 不包含任意属性(没有定义样式属性) ,如下:
 
