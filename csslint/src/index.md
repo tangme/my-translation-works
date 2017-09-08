@@ -8,7 +8,7 @@
 * [bulletproof-font-face](https://github.com/tangme/my-translation-works/blob/master/csslint/src/bulletproof-font-face.md)                        [原址](https://github.com/CSSLint/csslint/wiki/Bulletproof-font-face)
 * [compatible-vendor-prefixes](https://github.com/tangme/my-translation-works/blob/master/csslint/src/compatible-vendor-prefixes.md)            [原址](https://github.com/CSSLint/csslint/wiki/Require-compatible-vendor-prefixes)
 * [empty-rules](https://github.com/tangme/my-translation-works/blob/master/csslint/src/empty-rules.md)                                     [原址](https://github.com/CSSLint/csslint/wiki/Disallow-empty-rules)
-* display-property-grouping               [原址](https://github.com/CSSLint/csslint/wiki/Require-properties-appropriate-for-display)
+* [display-property-grouping](https://github.com/tangme/my-translation-works/blob/master/csslint/src/display-property-grouping.md)              [原址](https://github.com/CSSLint/csslint/wiki/Require-properties-appropriate-for-display)
 * duplicate-background-images         [原址](https://github.com/CSSLint/csslint/wiki/Disallow-duplicate-background-images)
 * duplicate-properties                        [原址](https://github.com/CSSLint/csslint/wiki/Disallow-duplicate-properties)
 * fallback-colors                                [原址](https://github.com/CSSLint/csslint/wiki/Require-fallback-colors)
