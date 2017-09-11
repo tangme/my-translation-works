@@ -1,6 +1,6 @@
 ## 不允许重复属性 [Disallow duplicate properties](https://github.com/CSSLint/csslint/wiki/Disallow-duplicate-properties)
 
-在早起网页开发中,相同的CSS属性出现了两次则毫无疑问是错误的,特别是 如果有两个不同的值,如下:
+在早先网页开发中,相同的CSS属性出现了两次则毫无疑问是错误的,特别是 如果有两个不同的值,如下:
 
 ```css
 .mybox {
