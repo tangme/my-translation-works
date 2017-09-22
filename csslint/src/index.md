@@ -31,5 +31,6 @@
 * [unique-headings](https://github.com/tangme/my-translation-works/blob/master/csslint/src/unique-headings.md)                         [原址](https://github.com/CSSLint/csslint/wiki/Headings-should-only-be-defined-once)
 * [universal-selector](https://github.com/tangme/my-translation-works/blob/master/csslint/src/universal-selector.md)                        [原址](https://github.com/CSSLint/csslint/wiki/Disallow-universal-selector)
 * [unqualified-attributes](https://github.com/tangme/my-translation-works/blob/master/csslint/src/unqualified-attributes.md)                    [原址](https://github.com/CSSLint/csslint/wiki/Disallow-unqualified-attribute-selectors)
-* vendor-prefix                                [原址](https://github.com/CSSLint/csslint/wiki/Require-standard-property-with-vendor-prefix)
-* zero-units                                     [原址](https://github.com/CSSLint/csslint/wiki/Disallow-units-for-zero-values)
+* [vendor-prefix](https://github.com/tangme/my-translation-works/blob/master/csslint/src/vendor-prefix.md)                                 [原址](https://github.com/CSSLint/csslint/wiki/Require-standard-property-with-vendor-prefix)
+* [zero-units](https://github.com/tangme/my-translation-works/blob/master/csslint/src/zero-units.md)                                     [原址](https://github.com/CSSLint/csslint/wiki/Disallow-units-for-zero-values)
+
