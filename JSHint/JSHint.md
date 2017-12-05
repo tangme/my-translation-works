@@ -79,3 +79,31 @@ for (key in obj) {
 
 更深入的理解 JavaScript 中的 `for in` 循环，请阅读 Angus Croll 文章 [Exploring JavaScript for-in loops](http://javascriptweblog.wordpress.com/2011/01/04/exploring-javascript-for-in-loops/) 
 
+#### freeze
+
+此选项不允许重写内置对象的原型，例如 `Array`,`Date` 等等
+
+```javascript
+// jshint freeze:true
+Array.prototype.count = function (value) { return 4; };
+// -> 警告: 扩展了内置对象的原型:'Array'
+```
+
+#### funcscope
+
+此选项 在把变量声明在控制语句内部，随后在外部使用时 不提示警告。尽管 JavaScript 只有两种真正的作用域 － 全局作用域 和 函数(方法)作用域 － 但这样使得刚接触这门语言的人难以理解与调试问题。这也是在默认情况下，JSHint 发现 变量使用在其预计作用域之外 提示警告。
+
+```javascript
+function test() {
+  if (true) {
+    var x = 0;
+  }
+
+  x += 1; // 默认情况: 'x' 在作用域之外使用.
+            // 当 funcscope:true 时，将不会提示警告
+}
+```
+
+#### futurehostile
+
+此选项在发现使用 JavaScript 后期新版保留标识符时 提示警告。尽管重写这些并未实现的保留标识符 不会有任何影响，但其可能导致后期将 代码库升级至新版时 发生问题。
