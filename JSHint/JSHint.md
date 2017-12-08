@@ -110,3 +110,36 @@ function test() {
 
 #### globals
 
+此选项用于定义一组 未在源代码中声明全局变量的白名单。其在与 `undef` 选项结合使用，用以取消警告 项目全局变量时，十分有用。
+
+设置为 `true` 允许对变量 读 写 操作。
+
+设置为 `false` 将提示JSHint 把变量作为只读。
+
+也可参看 "environment" 选项：一个选项组 用以快速定义JavaScript环境中的全局变量。
+
+把 `globals` 配置为一个单一文件，请参看  [Inline Configuration](http://jshint.com/docs/#inline-configuration).
+
+#### immed
+
+**注意** 此选项不建议使用并且将在下个 JSHint 主要发行版中移除。JSHint 限制了其本身是用来检测代码的正确性。如果你想提高编码的风格可阅读性，请参看 [the JSCS project](https://github.com/jscs-dev/node-jscs).
+
+此选项禁止使用 未用圆括号包围的即时函数。圆括号包围的表达式有助于读者理解你的代码是表达 函数的结果，而不是函数本身。
+
+#### indent
+
+**注意** 此选项不建议使用并且将在下个 JSHint 主要发行版中移除。JSHint 限制了其本身是用来检测代码的正确性。如果你想提高编码的风格可阅读性，请参看 [the JSCS project](https://github.com/jscs-dev/node-jscs).
+
+此选项 提示在代码中设置一个 tab 宽度，便于阅读。
+
+#### iterator
+
+此选项 在检测到使用 `__iterator__` 属性时，不提示警告。此属性并未被所有游览器支持，请谨慎使用。
+
+#### latedef
+
+此选项禁止 定义变量之前使用变量。JavaScript 仅有函数作用域，除此之外，所有的变量都会移动置顶到全局作用域。此默认行为会导致某些非常糟糕的问题，因此为了更安全的使用变量，请在变量定义之后再调用。
+
+将选项值设置为 "nofunc" 将允许忽略 函数声明。
+
+更多深入的了解 JavaScript 作用域及作用域提升，可阅读 Ben Cherry 的 [JavaScript Scoping and Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting) 。
