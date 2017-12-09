@@ -143,3 +143,82 @@ function test() {
 将选项值设置为 "nofunc" 将允许忽略 函数声明。
 
 更多深入的了解 JavaScript 作用域及作用域提升，可阅读 Ben Cherry 的 [JavaScript Scoping and Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting) 。
+
+#### maxcomplexity
+
+此选项 使你得以控制代码的圈复杂度。圈复杂度测量计算程序源码中独立语句个数。更多信息请参看  [cyclomatic complexity on Wikipedia](http://en.wikipedia.org/wiki/Cyclomatic_complexity).
+
+#### maxdepth
+
+此选项 提供你设置代码块嵌套的层级数量:
+
+```javascript
+// jshint maxdepth:2
+
+function main(meaning) {
+  var day = true;
+
+  if (meaning === 42) {
+    while (day) {
+      shuffle();
+
+      if (tired) { // JSHint: 代码块嵌套过深 (3层嵌套).
+          sleep();
+      }
+    }
+  }
+}
+```
+
+#### maxerr
+
+此选项 供你设置最大的警告数量，如警告超过最大数 JSHint 将不再检测其后合法性。默认值: 50 .
+
+#### maxlen
+
+注意** 此选项不建议使用并且将在下个 JSHint 主要发行版中移除。JSHint 限制了其本身是用来检测代码的正确性。如果你想提高编码的风格可阅读性，请参看 [the JSCS project](https://github.com/jscs-dev/node-jscs).
+
+此选项 提供设置每行代码的最大长度。
+
+#### maxparams
+
+此选项 提供设置每个 函数(方法) 的最大形参个数:
+
+```javascript
+// jshint maxparams:3
+
+function login(request, onSuccess) {
+  // ...
+}
+
+// JSHint: 形参个数过度 (4个参数).
+function logout(request, isManual, whereAmI, onSuccess) {
+  // ...
+}
+```
+
+#### maxstatements
+
+此选项 提供设置 每个函数(方法)体内 的最大语句条数:
+
+```javascript
+// jshint maxstatements:4
+
+function main() {
+  var i = 0;
+  var j = 0;
+
+  // 函数(方法)声明只当作一条雨具.
+  // 其内部语句条数不会计算至 所属外部的函数(方法)中.
+  function inner() {
+    var i2 = 1;
+    var j2 = 1;
+
+    return i2 + j2;
+  }
+
+  j = i + j;
+  return j; // JSHint: 语句过多 (5条语句)
+}
+```
+
