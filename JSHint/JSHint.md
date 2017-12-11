@@ -176,7 +176,7 @@ function main(meaning) {
 
 #### maxlen
 
-注意** 此选项不建议使用并且将在下个 JSHint 主要发行版中移除。JSHint 限制了其本身是用来检测代码的正确性。如果你想提高编码的风格可阅读性，请参看 [the JSCS project](https://github.com/jscs-dev/node-jscs).
+**注意** 此选项不建议使用并且将在下个 JSHint 主要发行版中移除。JSHint 限制了其本身是用来检测代码的正确性。如果你想提高编码的风格可阅读性，请参看 [the JSCS project](https://github.com/jscs-dev/node-jscs).
 
 此选项 提供设置每行代码的最大长度。
 
@@ -224,3 +224,8 @@ function main() {
 
 #### newcap
 
+**注意** 此选项不建议使用并且将在下个 JSHint 主要发行版中移除。JSHint 限制了其本身是用来检测代码的正确性。如果你想提高编码的风格可阅读性，请参看 [the JSCS project](https://github.com/jscs-dev/node-jscs).
+
+此选项 要求大写构造函数的名称。大写函数名称意在 函数与 `new` 操作符使用时，可以直观的帮助程序区分此函数是构造函数还是其它类型的函数，以便避免使用 `this` 点属性时的错误。
+
+当然不按此大写风格编码，并不会影响代码在各游览器或环境中运行，但是在阅读代码时则很难推敲出是否可用 new 操作。也正是这点的重要性，因为当函数意在使用 `new` 操作符时却没有使用，那么 `this` 将指向全局的对象 而不是 new 出来的对象。
