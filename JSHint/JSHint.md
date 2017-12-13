@@ -232,3 +232,42 @@ function main() {
 
 #### noarg
 
+此选项不允许使用 `arguments.caller` 和 `arguments.callee`. `.caller` 和 `.callee`使得没有优化的可能性，因此在之后的JavaScript版本中不建议使用。并且实际上，ECMAScript 5 在严格模式下 已禁止使用 `arguments.callee`.
+
+#### nocomma
+
+此选项禁止使用 逗号操作符。当其被误用(滥用)时，逗号操作符会模糊语句所表达的值或者造成错误的代码。
+
+#### noempty
+
+**注意** 此选项不建议使用并且将在下个 JSHint 主要发行版中移除。JSHint 限制了其本身是用来检测代码的正确性。如果你想提高编码的风格可阅读性，请参看 [the JSCS project](https://github.com/jscs-dev/node-jscs).
+
+此选项 当检测出代码中出现空代码块时 提示警告。JSLint 本身在检测所有空代码块时即提示警告，这里仅简单的提供一个设置选项。最后需要指出的是 并没有任何研究报告指出 空代码块在 JavaScript 中会对代码造成任何影响。
+
+#### nonbsp
+
+此选项警告在 "非中断空格" 字符串。此字符串在Mac电脑中敲击 option-space时出现，在非UTF-8的网页上 会有潜在的中断可能。
+
+#### nonew
+
+此选项禁止使用 构造函数以避免其副作用。一些编程人员在调用构造函数时并未将其返回值分配给任何变量:
+
+```javascript
+new MyConstructor();	
+```
+
+在这段代码中 对象通过 `new` 操作符调用 `MyConstructor` 创建后，并未在任何地方使用，看不出其使用目的；因而在编码中要避免如上的情形。
+
+#### notypeof
+
+此选项当发现 `typeof` 操作符的值不正确时，不提示警告。此操作符只会  [限定可能的返回值](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)。默认情况下，JSHint 警告于 我们由于输入错误而造成的比较值
+
+```javascript
+//  应该输入 'function' 而不是 'fuction'
+if (typeof a == "fuction") { // 输入了错误的值 'fuction'
+  // ...
+}
+```
+
+请不要使用此选项，除非你肯定的知道你不想使用此检测。
+
