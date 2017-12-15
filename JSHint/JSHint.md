@@ -304,5 +304,70 @@ JSHint 会认为以此方式声明的变量仅为可读。
 delete(obj.attr); // Warning: 无用的组操作符
 ```
 
+#### strict
+
+此选项要求 编码能在ECMAScript 5 严格模式下运行。 [严格模式](https://developer.mozilla.org/en/JavaScript/Strict_mode) 给多变的 JavaScript 用法作了一定限制。严格模式消除了一些 JavaScript 潜在的编码理解错误或缺陷，通过改变其所产生的错误并不会造成错误。同时也修复了以此给 JavaScript 引擎实现最佳效能问题的错误。
+
+* "global" - 在全局层面必须有 `"use strict"` 指令
+
+* "implied"
+
+* false - 不启用严格模式
+
+* true - 在函数层面必须有 `"use strict"` 指令
+
+  * ```
+    相比于全局启用严格模式 此方式更适合于脚本的加载，因为全局启用反而会影响页面加载其它的脚本
+    ```
+
+#### undef
+
+此选项禁止使用未定义过的变量名。此设置对于 遗漏和键入错误 非常有帮助。
+
+```javascript
+// jshint undef:true
+
+function test() {
+  var myVar = 'Hello, World';
+  console.log(myvar); // 啊，键入错误. JSHint 将提示未定义警告
+}
+
+```
+
+如果变量定义在其它文件里，可以使用 `global` 选项来配置。
+
+#### unused
+
+此选项 在检测出定义过的变量却从未使用过时 提示警告。这对于保证代码清晰特别有益，可以说是 `undef` 的变相版。
+
+```javascript
+// jshint unused:true
+
+function test(a, b) {
+  var c, d = 2;
+
+  return a + d;
+}
+
+test(1, 2);
+
+// Line 3: 'b' 虽定义 但从未使用
+// Line 4: 'c' 虽定义 但从未使用
+```
+
+对了，此选项在检测到 配置在 `global`指令中的全局变量，未使用时， 提示警告。
+
+此选项也可以设置 `vars` 用以只检测变量，而忽略函数的参数，或者设置 `strict` 检测 所有变量与函数参数。默认参数 (true) 时，允许未使用的参数 随使用过的参数一起。
+
+#### varstmt
+
+当设置为 true 时，禁止使用 var 。如下：
+
+```javascript
+// jshint varstmt: true
+
+var a; // Warning: `var` 声明禁止. 请使用 `let` or `const` 代替.
+```
+
 
 
