@@ -369,5 +369,35 @@ test(1, 2);
 var a; // Warning: `var` 声明禁止. 请使用 `let` or `const` 代替.
 ```
 
+### 可选选项
 
+当设置为 true,以下选项将使 JSHint 提示较少警告。
+
+#### asi
+
+此选项设置 在缺失分号下 不提示警告。在各社区论坛里，很多人都散布着有关对分号的疑惑不确定。一个普通的共识就是 分号 需要在所有的语句后结束。JavaScript关于分号所制定的规则被所有游览器所遵循，因此是否需要在代码中使用分号 由你决定。
+
+更多关于 JavaScript 的分号信息可阅读 Isaac Schlueter 的  [An Open Letter to JavaScript Leaders Regarding Semicolons](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding) 和  [JavaScript Semicolon Insertion](http://inimino.org/~inimino/blog/javascript_semicolons).
+
+#### boss
+
+此选项 在比较表达式错用为赋值时 不提示警告。通常情况下，编码如 `if (a = 10) {}` 被看作拼写错误。但是，在如下情况是有效的：
+
+```javascript
+for (var i = 0, person; person = people[i]; i++) {}
+```
+
+可以在两侧加上圆括号包围赋值语句以取消情况，如下：
+
+```javascript
+for (var i = 0, person; (person = people[i]); i++) {}
+```
+
+#### debug
+
+此选项 在代码中出现 `debugger` 语句时，不提示警告。
+
+#### elision
+
+此选项告知 JSHint 你的代码使用 ES3 数组省略元素，或孔元素 例如 `[1,,,4,,,7]` .
 
