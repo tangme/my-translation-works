@@ -401,3 +401,24 @@ for (var i = 0, person; (person = people[i]); i++) {}
 
 此选项告知 JSHint 你的代码使用 ES3 数组省略元素，或孔元素 例如 `[1,,,4,,,7]` .
 
+#### eqnull
+
+此选项 检测出 `==null` 比较时，不提示警告。此比较用法在你想检测变量是 `null` 或  `undefined` 时十分有效。
+
+#### esnext
+
+**注意** 此选项不建议使用，并将在下个 JSHint 的主要版本中移除。请用 `esversion: 6` 代替。
+
+此选项告知 JSHint 你的代码使用 ECMAScript 6 语法规则。注意 并非所有游览器都实现了此版本中的特性。
+
+更多信息请看 
+
+- [Specification for ECMAScript 6](http://www.ecma-international.org/ecma-262/6.0/index.html)
+
+#### evil
+
+此选项 发现使用 `eval` 时，不提示警告。 不推荐使用 `eval`，因为在各种脚本注入攻击下会使得代码十分脆弱，并且 JavaScript 引擎也难以达到最高效运行。
+
+#### expr
+
+此选项 在应当使用赋值 或 函数调用 却使用表达式时，不提示警告。大多数情况下出现此现象是因为键入错误。但是，特殊情形下也有此需求，这也就是此配置项需要注意的地方。
