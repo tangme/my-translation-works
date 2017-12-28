@@ -430,3 +430,14 @@ for (var i = 0, person; (person = people[i]); i++) {}
 此选项在使用 全局严格模式下 不提示警告。全局严格模式会对第三方插件造成影响，因此不推荐使用。
 
 更多关于严格模式的信息可见 `strict` 选项。	
+
+#### lastsemic
+
+此选项 在发现缺失分号时 不提示警告，但只适用于单行代码块:
+
+```javascript
+var name = (function() { return 'Anton' }());
+```
+
+这在当你使用 JavaScript 代码自动生成器时，变得很实用。
+
