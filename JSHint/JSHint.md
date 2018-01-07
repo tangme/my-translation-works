@@ -441,3 +441,8 @@ var name = (function() { return 'Anton' }());
 
 这在当你使用 JavaScript 代码自动生成器时，变得很实用。
 
+#### laxbreak
+
+**注意** 此选项不建议使用 并且将在下个JSHint主要发行版中移除。JSHint 限制了其本身是审查代码的正确性。如果你想检测代码书写规范，请访问 [the JSCS project. ](https://github.com/jscs-dev/node-jscs)
+
+此选项在 关闭绝大多数 代码中不安全换行的警告。在逗号首行编码格式中依旧提示警告。如想关闭此警告，可以参看 `laxcomma` (见下方)。
