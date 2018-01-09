@@ -461,3 +461,33 @@ var obj = {
 };
 ```
 
+#### loopfunc
+
+此选项关闭 循环体内定义函数的警告。在循环体内部定义函数会导致如下错误：
+
+```javascript
+var nums = [];
+
+for (var i = 0; i < 10; i++) {
+  nums[i] = function (j) {
+    return i + j;
+  };
+}
+
+nums[0](2); // 输出 12 而不是 2
+```
+
+修复如上代码，你需要复制一份 i 的值：
+
+```javascript
+var nums = [];
+
+for (var i = 0; i < 10; i++) {
+  (function (i) {
+    nums[i] = function (j) {
+        return i + j;
+    };
+  }(i));
+}
+```
+
