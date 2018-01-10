@@ -491,3 +491,11 @@ for (var i = 0; i < 10; i++) {
 }
 ```
 
+#### moz
+
+此选项告知 JSHint 你的代码正使用火狐 JavaScript 扩展。除非开发中指明了使用火狐游览器，你无须使用启用此选项。
+
+更多信息：
+
+* [New in JavaScript 1.7](https://developer.mozilla.org/en-US/docs/JavaScript/New_in_JavaScript/1.7)
+
