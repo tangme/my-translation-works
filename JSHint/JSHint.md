@@ -499,3 +499,25 @@ for (var i = 0; i < 10; i++) {
 
 * [New in JavaScript 1.7](https://developer.mozilla.org/en-US/docs/JavaScript/New_in_JavaScript/1.7)
 
+
+#### multistr
+
+**注意** 此选项不建议使用 并且将在下个JSHint主要发行版中移除。JSHint 限制了其本身是审查代码的正确性。如果你想检测代码书写规范，请访问 [the JSCS project. ](https://github.com/jscs-dev/node-jscs)
+
+此选项关闭 多行(跨行)字符串警告。多行(跨行)字符串在 JavaScript 中十分危险，当你不小心在转义字符(`\`) 与 新一行之间插入了空格，那会造成灾难性后果。
+
+注意 尽管此选项允许纠正 多行(跨行)字符串，但警告依旧会出现在：多行(跨行)字符串 没有转义字符 或者 出现任何字符在 转义字符与空格之间。
+
+```javascript
+// jshint multistr:true
+
+var text = "Hello\
+World"; // 没有问题
+
+text = "Hello
+World"; // 警告：没有转义字符
+
+text = "Hello\ 
+World"; // 警告, 在 \ 之后有空格
+```
+
