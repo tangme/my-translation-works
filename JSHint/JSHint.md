@@ -536,3 +536,23 @@ World"; // 警告, 在 \ 之后有空格
 #### scripturl
 
 此选项关闭 脚本目标链接 警告 例如 `javascript:...`。
+
+#### sub
+
+**注意** 此选项不建议使用 并且将在下个JSHint主要发行版中移除。JSHint 限制了其本身是审查代码的正确性。如果你想检测代码书写规范，请访问 [the JSCS project. ](https://github.com/jscs-dev/node-jscs)
+
+此选项在 可用点标记代替`[]`标记时 关闭警告:`person['name']` vs `person.name`
+
+#### supernew
+
+此选项关闭 怪异的构造函数警告，像 `new function(){...}` 和 `new Object;` 此类构造函数有时用于在JavaScript中构建单例:
+
+```javascript
+var singleton = new function() {
+  var privateVar;
+
+  this.publicMethod  = function () {}
+  this.publicMethod2 = function () {}
+};
+```
+
