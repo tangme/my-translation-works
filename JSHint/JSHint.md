@@ -556,3 +556,17 @@ var singleton = new function() {
 };
 ```
 
+#### validthis
+
+此选项 在代码运行在严格模式，且在非构造函数中使用 `this` 时，不提示警告。当且仅在函数作用域内部，你可以使用此选项，合理使用 `this` 在严格模式(例如：你可以调用方法通过使用 `Function.call`)
+
+**注意:**  此选项只能在函数作用与内部使用。当你想将此选项设置为全局时，JSHint 将因错误而构件失败。
+
+#### withstmt
+
+此选项 关闭使用 `with` 语句警告。`with` 语句的使用，在开发者中可能会造成困惑，并且出现 全局变量的意外定义。
+
+更多信息:
+
+- [with Statement Considered Harmful](http://yuiblog.com/blog/2006/04/11/with-statement-considered-harmful/)
+
