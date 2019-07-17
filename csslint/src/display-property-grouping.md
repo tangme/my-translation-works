@@ -1,4 +1,4 @@
-## 要求给display设置匹配的组合属性 [Require properties appropriate for display](https://github.com/CSSLint/csslint/wiki/Require-properties-appropriate-for-display)
+## 给display设置匹配的组合属性 [Require properties appropriate for display](https://github.com/CSSLint/csslint/wiki/Require-properties-appropriate-for-display)
 
 尽管你可以在CSS中定义任意的组合规则，但是呢，其中有些规则会因为 元素设置了`display`属性，而忽略你所设置的规则。这会导致你的CSS文件中出现脏代码，同时也误解了规则理应如何运转的。
 
